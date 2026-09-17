@@ -23,27 +23,34 @@
         }
 
         td {
-            border: 1px solid black;
+            width: 50%;
+            height: 100%;
+            padding: 20px;
             text-align: center;
             font-size: clamp(12px, 5vw, 60px);
         }
 
-        .box1 {
-            background-color: lightblue;
+        td:first-child {
+            background-color: darkkhaki;
+            border: 1px solid black;
+            border-right: 0;
         }
 
-        .box2 {
-            background-color: lightpink;
+        td:last-child {
+            background-color: lightsalmon;
+            border: 1px solid black;
         }
     </style>
 </head>
 
 <body>
+
     <table>
         <tr>
-            <td class="box1">LOVE</td>
-            <td class="box2">YOU</td>
+            <td>First cell</td>
+            <td>Second cell</td>
         </tr>
     </table>
+
 </body>
 </html>
