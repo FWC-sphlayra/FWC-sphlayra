@@ -1,29 +1,25 @@
-body {
+html, body {
     margin: 0;
-    min-height: 100vh;
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
 }
 
-.card {
-    width: 350px;
+body {
+    font-family: Arial, sans-serif;
     background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-.header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    font-size: 22px;
-    font-weight: bold;
+.card {
+    width: 310px;
+    margin: 5px auto;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    font-family: Georgia, serif;
+    font-size: 28px;
 }
 
 table {
@@ -32,47 +28,51 @@ table {
 }
 
 td {
-    padding: 15px;
+    padding: 0;
 }
 
 .profile {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: 100%;
+    height: 230px;
     object-fit: cover;
+    display: block;
 }
 
 h2 {
-    margin: 5px 0;
-    font-size: 24px;
+    margin: 28px 0 20px 0;
+    font-size: 32px;
 }
 
 p {
-    margin: 5px 0;
-    color: #777;
+    margin: 12px 0;
+    color: #888;
+    font-size: 18px;
 }
 
 .social {
-    padding: 10px;
+    padding: 15px 0 25px 0;
 }
 
-.social img {
-    width: 30px;
-    height: 30px;
-    margin: 0 8px;
-}
-
-.contact {
-    display: inline-block;
-    background-color: #333;
-    color: white;
+.social a {
+    margin: 0 4px;
+    color: black;
     text-decoration: none;
-    padding: 12px 40px;
-    margin-bottom: 15px;
-    border-radius: 6px;
+    font-size: 22px;
     font-weight: bold;
 }
 
+.contact-cell {
+    background-color: black;
+}
+
+.contact {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .contact:hover {
-    background-color: #555;
+    background-color: #333;
 }
