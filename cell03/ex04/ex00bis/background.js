@@ -1,4 +1,13 @@
-$("#changeColor").click(function() {
-    var color = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    $("body").css("background-color", color);
+$(document).ready(function() {
+
+    var colors = ["red", "green", "blue", "yellow"];
+    var index = 0;
+
+    $("body").css("background-color", colors[index]);
+
+    $("#changeColor").click(function() {
+        index = (index + 1) % colors.length;
+        $("body").css("background-color", colors[index]);
+    });
+
 });

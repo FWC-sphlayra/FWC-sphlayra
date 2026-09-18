@@ -1,49 +1,38 @@
-$("#calculate").click(function() {
-    var left = $("#left").val();
-    var right = $("#right").val();
-    var operator = $("#operator").val();
+$(document).ready(function() {
 
-    if (!/^\d+$/.test(left) || !/^\d+$/.test(right)) {
-        alert("Error :(");
-        return;
-    }
+    $("#calc").click(function() {
 
-    var a = parseInt(left);
-    var b = parseInt(right);
-    var result;
+        var left = parseFloat($("#left").val());
+        var right = parseFloat($("#right").val());
+        var operator = $("#operator").val();
 
-    if ((operator === "/" || operator === "%") && b === 0) {
-        alert("It's over 9000!");
-        console.log("It's over 9000!");
-        return;
-    }
+        if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+            alert("Error :(");
+            return;
+        }
 
-    switch (operator) {
-        case "+":
-            result = a + b;
-            break;
+        if ((operator == "/" || operator == "%") && right == 0) {
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
+            return;
+        }
 
-        case "-":
-            result = a - b;
-            break;
+        var result;
 
-        case "*":
-            result = a * b;
-            break;
+        if (operator == "+") {
+            result = left + right;
+        } else if (operator == "-") {
+            result = left - right;
+        } else if (operator == "*") {
+            result = left * right;
+        } else if (operator == "/") {
+            result = left / right;
+        } else if (operator == "%") {
+            result = left % right;
+        }
 
-        case "/":
-            result = a / b;
-            break;
+        alert(result);
+        console.log(result);
+    });
 
-        case "%":
-            result = a % b;
-            break;
-    }
-
-    alert(result);
-    console.log(result);
 });
-
-setInterval(function() {
-    alert("Please, use me...");
-}, 30000);
